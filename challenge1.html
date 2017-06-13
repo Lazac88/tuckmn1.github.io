@@ -1,0 +1,87 @@
+---
+layout: default
+title: Matt Tucker Portfolio
+---
+<div class="blurb">
+	<h1>Matt Tucker Evidence Portfolio</h1>
+  <h2>Interesting Challenge 1</h2>
+  <h3>Description</h3>
+    <p>
+      Learn how to make a RESTful Web API request to Digital NZ and receive a JSON string.
+    </p>
+    
+  <h3>Process & Steps Taken:</h3>
+    <p>
+      I had no prior knowledge of what a web API was, or how to use a web API when this task was assigned. 
+      During the task briefing, our project group leader (Patricia) gave us an introduction to what it was, and what it was used for. 
+      This was enough information for me to start learning how it works.
+    </p>
+    
+    <p>
+      I began by going to the DigitalNZ website and looking at their web API documentation. 
+      This was very detailed as there were many potential query parameters. 
+      The second thing was figuring out exactly what we required for this task. 
+      The goal was for the user to be able to type in any search term, and have results with images displayed to our end application.
+    </p>
+    
+    <p>
+      The DigitalNZ API has two required query parameters: API key and a search term. 
+      The API key is acquired by registering online. 
+      This allows DigitalNZ to keep track of who is making queries, and block people who are abusing their services. 
+      A search term was entered using the parameter ‘text=’. 
+      The database would then return any article containing that term.
+    </p>
+    
+    <p>
+      To reduce the amount of data returned we used an additional parameter to specify that only 10 results per search were required. 
+      We also specified that the returned JSON object must have an associated image.
+    </p>
+    
+  <h3>Challenges:</h3>
+    <p>
+      The hardest part about this task was learning the API’s request structure and putting together a workable URL. 
+      At first we didn’t include the ‘per_page’ and image category constraints, meaning we had thousands of results for each request. 
+      After reading through the documentation more thoroughly, we found that we could use the constraints to our advantage.
+    </p>
+    
+  <h3>Choosen Solution:</h3>
+    <p>
+      We successfully created a URL for DigitalNZ that returns the results we wanted. 
+      We were able to make this url customisable in the C# app we created, so users can specify the search term.
+    </p>
+    
+  <h3>What I learnt:</h3>
+    <p>
+      This was the very first task of Project 1, so really the very first time the team and I had to work independently without large influence from a lecturer. 
+    </p>
+    
+    <p>
+      Time management was an essential skill that I improved upon during this task. 
+      With no specified class or study time, I had to work on this task in my own scheduled time frames. 
+      This meant I had to plan ahead, to give myself enough time to complete the task to a sufficient standard. 
+      It was the perfect task to improve my time management skills because the learning curve was not incredibly steep, so if I made a mistake I had time to correct that.
+    </p>
+    
+    <p>
+        I learnt was how to study a topic efficiently. 
+        My preferred learning resource before this task was online tutorials, and Youtube or Lynda video tutorials. 
+        Although this was a good way to learn how to complete the task, it took up a lot of time because the tutorials often contained a lot of information that was not required for my task. 
+        As the task progressed, I noticed a shift in my learning methods towards using textbooks and the official documentation to get the specific information I required. 
+        This increased my study efficiency, so I became more productive and was able to move forwards faster in the task at hand.
+    </p>
+    
+    <p> 
+        APIs were an exciting new tool to learn to work with. 
+        I had never used one, or really knew much about them, however I could immediately see their value and potential in IT development. 
+        An API allows you to request data in a format that is accessible to many programming languages, the data can be in JSON format which is light weight and low bandwidth. 
+        It is also highly customisable allowing the API developer to choose exactly what can be returned to the user. 
+        You can also add things such as authentication to stop attacks on your site or block specific users. 
+        I feel like this task inspired me to learn more about application backends and how they are put together.
+    </p>
+      
+  <h3>Evidence:</h3>
+    <p>DigitalNZ Docs: https://www.digitalnz.org/developers</p>
+    <p>Example URL (Search Term = Kiwi; Results Per Page = 10; Must have an image category): </p>
+    <p>http://api.digitalnz.org/v3/records.json?api_key=pzby93yyajfuPiWXMcJ_&text=kiwi &per_page=10 &and[category][]=Images</p>
+    <p>CommSoft Production Branch: DigitalNZ_JSON_Test</p>
+</div>
